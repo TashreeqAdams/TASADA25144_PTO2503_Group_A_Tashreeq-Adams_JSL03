@@ -1,43 +1,33 @@
-# JSL02 Challenge – Solution Code
+# JSL03 Challenge - Console-Based Task Manager
 
-## Overview
+## Project description
 
-This repository provides the **official solution code for the JSL02 challenge**. It is meant to help students verify their understanding of JavaScript fundamentals, particularly **user input validation**, **conditional logic**, and **basic output to the console**.
+This application allows users to contribute up to three new entries to a predefined list of tasks. Each entry is automatically assigned a unique ID and captures details through user input dialogs. Users can also view a filtered list showing only completed items. The project highlights fundamental JavaScript skills, including object handling, array operations, and basic user interaction using prompts and alerts.
 
-Students should use this solution to:
-
-- Review their approach to handling user input via `prompt()`
-- Compare logic used for validating task statuses (`todo`, `doing`, `done`)
-- Understand how to handle multiple conditional outputs
-- Improve their code readability and structure before continuing to **JSL03**
-
-## Features Covered
-
-The solution demonstrates how to:
-
-- Prompt the user for **titles**, **descriptions**, and **status** of two tasks
-- Validate the entered status to ensure it's one of the allowed options
-- Display a **summary in the console** if a task is marked `"done"`
-- Log a motivational message if **neither** task is completed
-
-## Structure
+## Technologies used
 
 The project includes:
 
-- ✅ Interactive JavaScript to collect and validate user input
-- 🧠 Clear loops for input validation
-- 🔍 Simple logic that checks and logs completion status
-- 💬 Console messages to give meaningful feedback to the user
+- HTML
+- CSS
+- Javascript
+- Github
 
-## How to Use This Solution
+## Features created
 
-1. Open the project folder with **Live Server** in VS Code, then open your browser's **developer console** to view the outputs.
-2. Compare the input handling, validation, and logging logic to your own implementation.
-3. Reflect on any areas where your code could be **cleaner**, **more robust**, or **easier to read**.
-4. Make necessary improvements before continuing to JSL03.
+The project includes:
 
----
+- Tasks are stored as objects within an array for clean, organized data handling.
+- Users can create up to three new tasks by entering a title, description, and status through interactive prompts.
+- Each task is automatically assigned a unique, incrementing ID based on the last item in the array.
+- When the task limit is reached, users are alerted with a message: "There are enough tasks on your board, please check them in the console."
+- Includes a function to filter and display only tasks marked with the status "done".
+- All tasks are printed to the browser console under a clear label for easy inspection.
+- Completed tasks are logged separately in the console under a "Completed Tasks" heading for quick access.
 
-## License
+## How to Use This Project
 
-This solution code is provided for **educational use only**.
+1. Clone, fork or download the the zip files of the repository to gain editing access to the project files
+2. Open the project folder in VS Code.
+3. Place each of the necessary files in the code editor.
+4. Open the HTML file in live server to view the live project.
