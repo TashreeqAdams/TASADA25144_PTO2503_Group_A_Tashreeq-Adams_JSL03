@@ -51,3 +51,45 @@ if (task2Status === "done") {
 if (task1Status !== "done" && task2Status !== "done") {
   console.log("No tasks completed, let's get to work!");
 }
+
+// Task log
+
+const initialTasks = [
+  {
+    id: 1,
+    title: "Launch Epic Career",
+    description: "Create a killer Resume",
+    status: "todo",
+  },
+  {
+    id: 2,
+    title: "Master JavaScript",
+    description: "Get comfortable with the fundamentals",
+    status: "doing",
+  },
+  {
+    id: 3,
+    title: "Contribute to Open Source Projects",
+    description:
+      "Gain practical experience and collaborate with others in the software development community",
+    status: "done",
+  },
+];
+
+let lastId;
+if (initialTasks.length > 0) {
+  lastId = initialTasks[initialTasks.length - 1].id;
+} else {
+  lastId = 0;
+}
+
+let taskOne = {
+  id: lastId + 1,
+  title: task1Title,
+  description: task1Description,
+  status: task1Status,
+};
+
+initialTasks.push(taskOne);
+
+console.log(initialTasks);
