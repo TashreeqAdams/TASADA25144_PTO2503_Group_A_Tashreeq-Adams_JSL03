@@ -37,6 +37,24 @@ while (
   ).toLowerCase();
 }
 
+// Repeat the same steps for task 3
+const task3Title = prompt("Enter task 3 title:");
+const task3Description = prompt("Enter task 3 description:");
+let task3Status = prompt(
+  "Enter task 3 status (todo, doing, done):"
+).toLowerCase();
+
+while (
+  task3Status !== "todo" &&
+  task3Status !== "doing" &&
+  task3Status !== "done"
+) {
+  alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
+  task3Status = prompt(
+    "Enter task 3 status (todo, doing, done):"
+  ).toLowerCase();
+}
+
 // Check if task1 is done, and log it if so
 if (task1Status === "done") {
   console.log("Title: " + task1Title + ", status: " + task1Status);
@@ -47,8 +65,17 @@ if (task2Status === "done") {
   console.log("Title: " + task2Title + ", status: " + task2Status);
 }
 
-// If neither task1 nor task2 is done, show a motivational message
-if (task1Status !== "done" && task2Status !== "done") {
+// Check if task3 is done, and log it if so
+if (task3Status === "done") {
+  console.log("Title: " + task3Title + ", status: " + task3Status);
+}
+
+// If neither task1,task2 nor task3 is done, show a motivational message
+if (
+  task1Status !== "done" &&
+  task2Status !== "done" &&
+  task3Status !== "done"
+) {
   console.log("No tasks completed, let's get to work!");
 }
 
@@ -76,12 +103,16 @@ const initialTasks = [
   },
 ];
 
+// ID checker
+
 let lastId;
 if (initialTasks.length > 0) {
   lastId = initialTasks[initialTasks.length - 1].id;
 } else {
   lastId = 0;
 }
+
+// New Task
 
 let taskOne = {
   id: lastId + 1,
@@ -91,5 +122,24 @@ let taskOne = {
 };
 
 initialTasks.push(taskOne);
+
+// ID checker
+
+if (initialTasks.length > 0) {
+  lastId = initialTasks[initialTasks.length - 1].id;
+} else {
+  lastId = 0;
+}
+
+// New Task
+
+let taskTwo = {
+  id: lastId + 1,
+  title: task2Title,
+  description: task2Description,
+  status: task2Status,
+};
+
+initialTasks.push(taskTwo);
 
 console.log(initialTasks);
