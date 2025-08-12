@@ -142,4 +142,29 @@ let taskTwo = {
 
 initialTasks.push(taskTwo);
 
+// New Task
+
+let taskThree = {
+  id: lastId + 1,
+  title: task3Title,
+  description: task3Description,
+  status: task3Status,
+};
+
+initialTasks.push(taskThree);
+
 console.log(initialTasks);
+
+if (initialTasks.length >= 6) {
+  console.log(
+    "There are enough tasks on your board, please check them in the console."
+  );
+}
+
+// Filter tasks with status "done"
+let completedTasks = initialTasks.filter(
+  (initialTasks) => initialTasks.status === "done"
+);
+
+// Log completed tasks
+console.log("Completed Tasks:", completedTasks);
