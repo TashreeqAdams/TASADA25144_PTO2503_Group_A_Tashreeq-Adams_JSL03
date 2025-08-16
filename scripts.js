@@ -56,28 +56,28 @@ while (
 }
 
 // Check if task1 is done, and log it if so
-if (task1Status === "done") {
-  console.log("Title: " + task1Title + ", status: " + task1Status);
-}
+// if (task1Status === "done") {
+//   console.log("Title: " + task1Title + ", status: " + task1Status);
+// }
 
-// Check if task2 is done, and log it if so
-if (task2Status === "done") {
-  console.log("Title: " + task2Title + ", status: " + task2Status);
-}
+// // Check if task2 is done, and log it if so
+// if (task2Status === "done") {
+//   console.log("Title: " + task2Title + ", status: " + task2Status);
+// }
 
-// Check if task3 is done, and log it if so
-if (task3Status === "done") {
-  console.log("Title: " + task3Title + ", status: " + task3Status);
-}
+// // Check if task3 is done, and log it if so
+// if (task3Status === "done") {
+//   console.log("Title: " + task3Title + ", status: " + task3Status);
+// }
 
-// If neither task1,task2 nor task3 is done, show a motivational message
-if (
-  task1Status !== "done" &&
-  task2Status !== "done" &&
-  task3Status !== "done"
-) {
-  console.log("No tasks completed, let's get to work!");
-}
+// // If neither task1,task2 nor task3 is done, show a motivational message
+// if (
+//   task1Status !== "done" &&
+//   task2Status !== "done" &&
+//   task3Status !== "done"
+// ) {
+//   console.log("No tasks completed, let's get to work!");
+// }
 
 // Task log
 
@@ -142,6 +142,14 @@ let taskTwo = {
 
 initialTasks.push(taskTwo);
 
+// ID checker
+
+if (initialTasks.length > 0) {
+  lastId = initialTasks[initialTasks.length - 1].id;
+} else {
+  lastId = 0;
+}
+
 // New Task
 
 let taskThree = {
@@ -153,13 +161,23 @@ let taskThree = {
 
 initialTasks.push(taskThree);
 
-console.log(initialTasks);
+// ID checker
 
-if (initialTasks.length >= 6) {
-  console.log(
+if (initialTasks.length > 0) {
+  lastId = initialTasks[initialTasks.length - 1].id;
+} else {
+  lastId = 0;
+}
+
+console.log("All tasks:", initialTasks);
+
+// Alert for maximum tasks
+
+let maxTasks;
+if (initialTasks.length >= 6)
+  alert(
     "There are enough tasks on your board, please check them in the console."
   );
-}
 
 // Filter tasks with status "done"
 let completedTasks = initialTasks.filter(
