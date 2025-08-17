@@ -55,30 +55,6 @@ while (
   ).toLowerCase();
 }
 
-// Check if task1 is done, and log it if so
-// if (task1Status === "done") {
-//   console.log("Title: " + task1Title + ", status: " + task1Status);
-// }
-
-// // Check if task2 is done, and log it if so
-// if (task2Status === "done") {
-//   console.log("Title: " + task2Title + ", status: " + task2Status);
-// }
-
-// // Check if task3 is done, and log it if so
-// if (task3Status === "done") {
-//   console.log("Title: " + task3Title + ", status: " + task3Status);
-// }
-
-// // If neither task1,task2 nor task3 is done, show a motivational message
-// if (
-//   task1Status !== "done" &&
-//   task2Status !== "done" &&
-//   task3Status !== "done"
-// ) {
-//   console.log("No tasks completed, let's get to work!");
-// }
-
 // Task log
 
 const initialTasks = [
